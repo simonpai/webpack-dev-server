@@ -43,11 +43,11 @@ describe('Client code', () => {
 
     jest.setTimeout(30000);
 
-    beforeAll(() => {
+    beforeEach(() => {
       proxy = startProxy(9000);
     });
 
-    afterAll(() => {
+    afterEach(() => {
       proxy.close();
     });
 
