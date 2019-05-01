@@ -21,7 +21,7 @@ function startProxy(port) {
 }
 
 describe('Client code', () => {
-  beforeAll((done) => {
+  beforeEach((done) => {
     const options = {
       compress: true,
       port: 9001,
@@ -36,7 +36,7 @@ describe('Client code', () => {
     helper.startAwaitingCompilation(config, options, done);
   });
 
-  afterAll(helper.close);
+  afterEach(helper.close);
 
   describe('behind a proxy', () => {
     let proxy;
